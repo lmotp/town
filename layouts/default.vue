@@ -1,20 +1,15 @@
 <template>
-  <TheHeader />
+  <TheExperience />
   <main role="'main'">
     <slot />
   </main>
-  <TheFooter />
 </template>
 
 <script setup>
-import TheFooter from "./TheFooter.vue";
-import TheHeader from "./TheHeader.vue";
+import TheExperience from "./TheExperience.vue";
 </script>
 
 <style lang="scss" scoped>
-:deep(main) {
-  scroll-behavior: smooth;
-  scrollbar-gutter: stable;
-  overflow-x: hidden;
+main {
 }
 </style>

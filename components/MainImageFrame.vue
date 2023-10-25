@@ -13,7 +13,7 @@
         stroke-width="6"
         fill="#0E0E0E"
       />
-      <image width="100%" height="100%" clip-path="url(#shape)" href="~/assets/images/sun-neutral.jpg" />
+      <image width="100%" height="100%" clip-path="url(#shape)" :href="imgSrc" />
     </svg>
   </div>
 </template>
@@ -24,9 +24,9 @@ const props = defineProps({ imgSrc: { type: String, default: "" } });
 
 <style lang="scss" scoped>
 .image__wrapper {
-  width: 375px;
+  width: 400px;
 
-  path {
+  svg path {
     transform-origin: center center;
     rotate: 10deg;
     animation: 1s ease-in-out 0s infinite alternate none running rotate-sun;
