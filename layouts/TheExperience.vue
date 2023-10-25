@@ -25,7 +25,7 @@ const material = new THREE.MeshBasicMaterial({ map: texture });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
-const camera = new THREE.PerspectiveCamera(54, sizes.width / sizes.height, 1, 3000);
+const camera = new THREE.PerspectiveCamera(50, sizes.width / sizes.height, 1, 3000);
 camera.position.set(20, 0, 900);
 scene.add(camera);
 
@@ -59,10 +59,10 @@ function setRender() {
 }
 
 function loop() {
-  mouseTarget.lerp(mouse, 0.1);
+  mouseTarget.lerp(mouse, 0.08);
 
-  mesh.rotation.x = -mouseTarget.y * 0.3;
-  mesh.rotation.y = -mouseTarget.x * 0.3;
+  mesh.rotation.x = -mouseTarget.y * 0.15;
+  mesh.rotation.y = -mouseTarget.x * 0.15;
 
   renderer.render(scene, camera);
 
