@@ -1,37 +1,18 @@
 <template>
-  <div class="character">
-    <div class="character__sun">
-      <MainImageFrame img-src="/images/sun-neutral.jpg" />
-    </div>
-    <div class="character__traveler">
-      <MainImageFrame img-src="/images/traveler.jpg" />
-    </div>
-  </div>
+  <ul class="lists">
+    <NuxtLink to="/">메인</NuxtLink>
+    <NuxtLink to="/box">박스</NuxtLink>
+    <NuxtLink to="/character">캐릭터</NuxtLink>
+  </ul>
 </template>
 
 <script setup></script>
 
 <style lang="scss" scoped>
-.character {
-  position: fixed;
-  inset: 0;
+.lists {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background-color: transparent;
-
-  pointer-events: none;
-
-  &__sun {
-    position: absolute;
-    top: -96px;
-    right: -106px;
-  }
-
-  &__traveler {
-    position: absolute;
-    bottom: -72px;
-    left: -96px;
-  }
+  gap: 20px;
+  padding: 20px;
 }
 </style>

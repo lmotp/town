@@ -1,13 +1,10 @@
 <template>
-  <TheExperience />
   <main role="'main'">
     <slot />
   </main>
 </template>
 
-<script setup>
-import TheExperience from "./TheExperience.vue";
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 main {
