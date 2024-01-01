@@ -1,8 +1,5 @@
 <template>
   <main>
-    <!-- 캔버스 외곽 -->
-    <TheExperience />
-
     <!-- 캐릭터 틀 -->
     <div class="character">
       <div class="character__sun">
@@ -15,9 +12,7 @@
   </main>
 </template>
 
-<script setup>
-import TheExperience from "../layouts/TheExperience.vue";
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .character {

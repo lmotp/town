@@ -11,6 +11,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 import CharacterControls from "@/composables/characterControls.js";
+import { createPlane } from "@/composables/createPlane.js";
 
 let renderer;
 let orbitControls;

@@ -74,12 +74,12 @@ export default class CharacterControls {
 
     if (this.currentAction == "Run" || this.currentAction == "Walk") {
       // calculate towards camera direction
-      var angleYCameraDirection = Math.atan2(
+      let angleYCameraDirection = Math.atan2(
         this.camera.position.x - this.model.position.x,
         this.camera.position.z - this.model.position.z
       );
       // diagonal movement angle offset
-      var directionOffset = this.directionOffset(keysPressed);
+      let directionOffset = this.directionOffset(keysPressed);
 
       // rotate model
       this.rotateQuarternion.setFromAxisAngle(this.rotateAngle, angleYCameraDirection + directionOffset);
@@ -97,6 +97,8 @@ export default class CharacterControls {
       // move model & camera
       const moveX = this.walkDirection.x * velocity * delta;
       const moveZ = this.walkDirection.z * velocity * delta;
+
+      console.log(moveX);
       this.model.position.x += moveX;
       this.model.position.z += moveZ;
       this.updateCameraTarget(moveX, moveZ);
@@ -116,7 +118,7 @@ export default class CharacterControls {
   }
 
   directionOffset(keysPressed) {
-    var directionOffset = 0; // w
+    let directionOffset = 0; // w
 
     if (keysPressed[W]) {
       if (keysPressed[A]) {

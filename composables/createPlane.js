@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-export default function createPlane(src) {
+export function createPlane(src) {
   const WIDTH = 80;
   const HEIGHT = 80;
   const REPEAT_COUNT = 10;
@@ -21,7 +21,7 @@ export default function createPlane(src) {
 }
 
 // plane 반복해서 넓여주는
-function wrapAndRepeatTexture(map, count) {
+export function wrapAndRepeatTexture(map, count) {
   map.wrapS = THREE.RepeatWrapping;
   map.wrapT = THREE.RepeatWrapping;
   map.repeat.x = count;
